@@ -62,7 +62,7 @@ body {
 /* Стилі для слайдера на комп’ютерній версії */
 .product-main-img-wrap {
     width: 80%; /* Займає 80% ширини контейнера */
-    max-width: 500px; /* Зменшена максимальна ширина */
+    max-width: 550px; /* Зменшена максимальна ширина */
     height: auto;
     overflow: hidden;
     border: 1px solid #ccc;
