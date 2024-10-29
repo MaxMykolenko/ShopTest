@@ -283,11 +283,12 @@ footer {
 
     .buy-button {
         width: 80%; /* Займає 80% ширини екрану */
-        max-width: 300px; /* Максимальна ширина для кнопки */
-        height: auto; /* Автоматична висота, щоб зберігати пропорції */
-        padding: 15px; /* Більше внутрішнього відступу */
-        font-size: 18px; /* Зменшений шрифт */
-        margin-top: 10px; /* Зменшений відступ зверху */
+        max-width: 300px; /* Максимальна ширина кнопки */
+        height: auto;
+        padding: 15px;
+        font-size: 18px;
+        margin: 10px auto; /* Центрування кнопки */
+        text-align: center;
     }
 
     .product-details, .product-description, .product-specs, .product-complectation, .product-reviews {
