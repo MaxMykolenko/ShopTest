@@ -10,7 +10,7 @@
 <body>
 
     <div class="container">
-        <form class="user-info">
+        <form class="user-info" action="/order" method="POST">
             <h1>Підтвердження замовлення</h1>
             <label for="first-name">Ім'я</label>
             <input type="text" id="first-name" name="first-name" placeholder="Ім'я..." required>
@@ -21,6 +21,9 @@
             <label for="last-name">Прізвище</label>
             <input type="text" id="last-name" name="last-name" placeholder="Прізвище" required>
 
+            <label for="quantity">Кількість:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
             <button type="submit">Надіслати</button>
         </form>
 
@@ -29,8 +32,6 @@
             <img src="Files/image1.png" alt="Електрообігрівач RAF 1185" class="product-image">
             <p><strong>Назва:</strong> Електрообігрівач RAF 1185</p>
             <p><strong>Ціна:</strong> 649 грн</p>
-            <label for="quantity">Кількість:</label>
-            <input type="number" id="quantity" name="quantity" min="1" value="1">
         </div>
     </div>
 
