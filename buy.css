@@ -75,3 +75,23 @@ footer {
     color: #cacbc7;
     margin-top: auto; /* Зміщення футера вниз */
 }
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Вирівнювання по вертикалі */
+    }
+
+    .product-info {
+        margin-right: 0; /* Скидання правого відступу для мобільних */
+        margin-bottom: 20px; /* Відступ між блоками на мобільних */
+    }
+
+    .user-info {
+        order: 2; /* Зміщує форму вниз */
+    }
+
+    .product-info {
+        order: 1; /* Зміщує інформацію про товар вверх */
+    }
+}
