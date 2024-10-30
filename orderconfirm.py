@@ -14,8 +14,8 @@ def order():
     last_name = request.form['last-name']
     quantity = request.form['quantity']
 
-    bot_token = 'YOUR_BOT_TOKEN'  # Заміни на ваш токен бота
-    chat_id = 'YOUR_CHAT_ID'  # Заміни на ваш chat_id
+    bot_token = '7861661789:AAEkjvKzbkvePMjg5NwyqqBJBeU0yakASIg'  # Заміни на ваш токен бота
+    chat_id = '787418493'  # Заміни на ваш chat_id
     message = f"Новий замовлення:\nІм'я: {first_name}\nПо-Батькові: {middle_name}\nПрізвище: {last_name}\nКількість: {quantity}"
 
     # Надсилання повідомлення до Telegram
