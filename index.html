@@ -47,7 +47,15 @@
             </div>
         </div>
         <div class="product-price">649 грн</div>
-        <button class="buy-button">Купити</button>
+
+        <button id="buyButton" class="buy-button">Купити</button>
+
+    <script>
+     document.getElementById('buyButton').addEventListener('click', function() {
+        window.location.href = 'buy.html';
+     });
+    </script>
+
 
     </div>
 
@@ -100,7 +108,7 @@
     <footer>
         <a href="https://github.com/MaxMykolenko" style="color: #cacbc7;">©Made by Maks Mykolenko</a>
     </footer>
-    
+
 </body>
 
 </html>

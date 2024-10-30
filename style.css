@@ -240,6 +240,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
@@ -302,6 +303,7 @@ footer {
         margin: 10px auto; /* Центрування кнопки */
         margin-top: -10px; /* Відступ між ціною і кнопкою */
         text-align: center;
+        cursor: pointer;
     }
 
     .product-details, .product-description, .product-specs, .product-complectation, .product-reviews {

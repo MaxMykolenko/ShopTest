@@ -15,3 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 });
+
+document.getElementById('buyButton').addEventListener('click', function() {
+     window.location.href = 'buy.html';
+});

@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f3;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex; /* Використання Flexbox для горизонтального вирівнювання */
+    justify-content: space-between; /* Простір між формою і полем для товару */
+    max-width: 800px; /* Максимальна ширина контейнера */
+    margin: auto; /* Центрування контейнера */
+}
+
+.user-info {
+    max-width: 400px; /* Максимальна ширина форми */
+    background-color: #fff; /* Фон форми */
+    padding: 20px; /* Внутрішні відступи */
+    border-radius: 8px; /* Закруглені кути */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь */
+}
+
+label {
+    display: block; /* Кожна мітка на новому рядку */
+    margin-bottom: 5px; /* Відступ між міткою та полем вводу */
+    font-weight: bold; /* Жирний шрифт для міток */
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%; /* Поле вводу на всю ширину */
+    padding: 10px; /* Внутрішні відступи */
+    margin-bottom: 15px; /* Відступ між полями вводу */
+    border: 1px solid #ccc; /* Колір обводки */
+    border-radius: 4px; /* Закруглені кути */
+    box-sizing: border-box; /* Включення відступів в загальну ширину */
+}
+
+.product-info {
+    max-width: 350px; /* Максимальна ширина для поля з інформацією про товар */
+    background-color: #fff; /* Фон поля товару */
+    padding: 20px; /* Внутрішні відступи */
+    border-radius: 8px; /* Закруглені кути */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь */
+    margin-left: 20px; /* Відступ між формою та полем товару */
+}
+
+.product-image {
+    width: 100%; /* Зображення на всю ширину контейнера */
+    height: auto; /* Автоматична висота для збереження пропорцій */
+    border-radius: 4px; /* Закруглені кути зображення */
+    margin-bottom: 10px; /* Відступ під зображенням */
+}
+
+/* Стилі для кнопки "Надіслати" */
+button {
+    padding: 10px 20px; /* Внутрішні відступи для кнопки */
+    font-size: 16px; /* Розмір шрифту */
+    color: white; /* Колір тексту */
+    background-color: #007bff; /* Фоновий колір кнопки */
+    border: none; /* Без обводки */
+    border-radius: 5px; /* Закруглені кути кнопки */
+    cursor: pointer; /* Показує, що кнопка клікабельна */
+    transition: background-color 0.3s; /* Перехідний ефект для фону */
+}
+
+button:hover {
+    background-color: #0056b3; /* Колір фону при наведенні */
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #cacbc7;
+    margin-top: auto; /* Зміщення футера вниз */
+}
