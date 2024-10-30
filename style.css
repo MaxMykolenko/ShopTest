@@ -57,29 +57,40 @@ body {
     color: #333;
     font-weight: bold;
     margin-bottom: 10px;
+    margin-left: 60px;
 }
 
 /* Стилі для слайдера на комп’ютерній версії */
 .product-main-img-wrap {
-    width: 80%; /* Займає 80% ширини контейнера */
-    max-width: 550px; /* Зменшена максимальна ширина */
+    width: 90%;
+    max-width: 700px;
     height: auto;
     overflow: hidden;
     border: 1px solid #ccc;
-    margin: 0 auto; /* Центрування слайдера */
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
 }
 
+/* Слайдер */
 .swiper {
     width: 100%;
-    height: auto; /* Адаптується під зображення */
+    height: auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Центрування по горизонталі */
+    align-items: center; /* Центрування по вертикалі */
 }
 
 .swiper-slide img {
-    width: 100%;
-    height: auto;
+    width: 80%; /* Зменшене зображення від ширини контейнера */
+    height: auto; /* Авто висота для збереження пропорцій */
     object-fit: contain;
+    border-radius: 3px;
 }
-
 /* Додатковий стиль для мобільних пристроїв */
 @media (max-width: 768px) {
     .product-main-img-wrap {
@@ -92,16 +103,16 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #fff;
+    color: #0011ff;
 }
 
 /* Ціна товару */
 .product-price {
-    font-size: 24px;
+    font-size: 30px;
     color: #333;
     font-weight: bold;
-    margin-top: 100px; /* Відступ вниз */
-    margin-left: 100px; /* Відступ праворуч від слайдера */
+    margin-top: 220px; /* Відступ вниз */
+    margin-left: 200px; /* Відступ праворуч від слайдера */
 }
 
 .product-details {
@@ -220,8 +231,8 @@ body {
     display: block;
     width: 200px;
     height: 60px;
-    margin-top: 150px; /* Відступ між ціною і кнопкою */
-    margin-left: -110px; /* Вирівнювання праворуч від слайдера */
+    margin-top: 260px; /* Відступ між ціною і кнопкою */
+    margin-left: -172px; /* Вирівнювання праворуч від слайдера */
     padding: 10px 20px;
     font-size: 20px;
     color: white;
@@ -238,13 +249,12 @@ body {
 
 /* Стилі для футера */
 footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
-    color: #cacbc7;
     text-align: center;
     padding: 10px 0;
     font-size: 20px;
+    color: #cacbc7;
+    margin-top: auto; /* Зміщення футера вниз */
 }
 
 /* Адаптивні стилі для мобільних пристроїв */
