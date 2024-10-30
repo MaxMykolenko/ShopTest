@@ -36,7 +36,7 @@ input[type="text"], input[type="number"], textarea {
 }
 
 .product-info {
-    max-width: 350px; /* Максимальна ширина для поля з інформацією про товар */
+    max-width: 400px; /* Максимальна ширина для поля з інформацією про товар */
     background-color: #fff; /* Фон поля товару */
     padding: 20px; /* Внутрішні відступи */
     border-radius: 8px; /* Закруглені кути */
@@ -85,7 +85,6 @@ footer {
     .product-info {
         margin-left: 0; /* Скидання лівого відступу для мобільних */
         margin-bottom: 20px; /* Відступ між блоками на мобільних */
-        max-width: 400px;
         margin-right: 0; /* Скидання правого відступу для мобільних */
     }
 
