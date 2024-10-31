@@ -10,6 +10,7 @@
     <div class="container">
         <form class="user-info" id="orderForm">
             <h1>Підтвердження замовлення</h1>
+            
             <label for="first-name">Ім'я</label>
             <input type="text" id="first-name" name="first-name" placeholder="Ім'я..." required>
 
@@ -19,6 +20,15 @@
             <label for="last-name">Прізвище</label>
             <input type="text" id="last-name" name="last-name" placeholder="Прізвище" required>
 
+            <label for="phone-number">Номер телефону</label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Номер телефону" required>
+
+            <label for="city">Місто</label>
+            <input type="text" id="city" name="city" placeholder="Місто" required>
+
+            <label for="post-office">Відділення Нової Пошти</label>
+            <input type="text" id="post-office" name="post-office" placeholder="Відділення" min="1" required>
+
             <label for="quantity">Кількість:</label>
             <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
@@ -26,7 +36,7 @@
         </form>
 
         <div class="product-info">
-            <h2>Інформація про товар</h2>
+            <h1>Інформація про товар</h1>
             <img src="Files/image1.png" alt="Електрообігрівач RAF 1185" class="product-image">
             <p><strong>Назва:</strong> Електрообігрівач RAF 1185</p>
             <p><strong>Ціна:</strong> 649 грн</p>
@@ -46,6 +56,9 @@
             const firstName = document.getElementById('first-name').value;
             const middleName = document.getElementById('middle-name').value;
             const lastName = document.getElementById('last-name').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+            const city = document.getElementById('city').value;
+            const postOffice = document.getElementById('post-office').value;
             const quantity = document.getElementById('quantity').value;
     
             try {
@@ -55,7 +68,7 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ firstName, middleName, lastName, quantity })
+                    body: JSON.stringify({ firstName, middleName, lastName, phoneNumber, city, postOffice, lastName, quantity })
                 });
                 
                 const data = await response.json();
