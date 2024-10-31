@@ -8,7 +8,7 @@ body {
 .container {
     display: flex; /* Використання Flexbox для горизонтального вирівнювання */
     justify-content: space-between; /* Простір між формою і полем для товару */
-    max-width: 800px; /* Максимальна ширина контейнера */
+    max-width: 900px; /* Максимальна ширина контейнера */
     margin: auto; /* Центрування контейнера */
 }
 
@@ -26,7 +26,7 @@ label {
     font-weight: bold; /* Жирний шрифт для міток */
 }
 
-input[type="text"], input[type="number"], textarea {
+input[type="text"], input[type="number"], input[type="tel"], textarea{
     width: 100%; /* Поле вводу на всю ширину */
     padding: 10px; /* Внутрішні відступи */
     margin-bottom: 15px; /* Відступ між полями вводу */
@@ -53,6 +53,7 @@ input[type="text"], input[type="number"], textarea {
 
 /* Стилі для кнопки "Надіслати" */
 button {
+    margin-left: 140px;
     padding: 10px 20px; /* Внутрішні відступи для кнопки */
     font-size: 16px; /* Розмір шрифту */
     color: white; /* Колір тексту */
@@ -94,5 +95,8 @@ footer {
 
     .product-info {
         order: 1; /* Зміщує інформацію про товар вверх */
+    }
+    h1{
+        text-align: center;
     }
 }
