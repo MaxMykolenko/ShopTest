@@ -25,45 +25,6 @@
             <button type="submit">Надіслати</button>
         </form>
 
-        <script>
-            document.getElementById('orderForm').addEventListener('submit', async function(event) {
-                event.preventDefault(); // Prevent the default form submission
-        
-                // Collect form data
-                const firstName = document.getElementById('first-name').value;
-                const middleName = document.getElementById('middle-name').value;
-                const lastName = document.getElementById('last-name').value;
-                const quantity = document.getElementById('quantity').value;
-        
-                try {
-                    const response = await fetch('/order', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            firstName,
-                            middleName,
-                            lastName,
-                            quantity,
-                        }),
-                    });
-        
-                    const result = await response.json();
-        
-                    if (result.success) {
-                        alert('Замовлення надіслано успішно!');
-                    } else {
-                        alert('Помилка: ' + result.message);
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                    alert('Виникла помилка при надсиланні замовлення.');
-                }
-            });
-        </script>
-        
-
         <div class="product-info">
             <h2>Інформація про товар</h2>
             <img src="Files/image1.png" alt="Електрообігрівач RAF 1185" class="product-image">
@@ -75,5 +36,40 @@
     <footer>
         <a href="https://github.com/MaxMykolenko" style="color: #cacbc7;">©Made by Maks Mykolenko</a>
     </footer>
+
+    <!-- Add this script before the closing body tag -->
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+    
+            // Збір даних з форми
+            const firstName = document.getElementById('first-name').value;
+            const middleName = document.getElementById('middle-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const quantity = document.getElementById('quantity').value;
+    
+            try {
+                // Заміна на локальний шлях з портом, якщо сервер працює на іншому порту
+                const response = await fetch('http://localhost:3000/order', { 
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ firstName, middleName, lastName, quantity })
+                });
+                
+                const data = await response.json();
+                if (data.success) {
+                    alert('Замовлення надіслано успішно!');
+                } else {
+                    alert('Помилка при надсиланні замовлення: ' + data.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Виникла помилка при надсиланні замовлення.');
+            }
+        });
+    </script>
+    
 </body>
 </html>
