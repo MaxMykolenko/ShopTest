@@ -10,6 +10,7 @@
     <div class="container">
         <form class="user-info" id="orderForm">
             <h1>Підтвердження замовлення</h1>
+
             <label for="first-name">Ім'я</label>
             <input type="text" id="first-name" name="first-name" placeholder="Ім'я..." required>
 
@@ -18,6 +19,15 @@
 
             <label for="last-name">Прізвище</label>
             <input type="text" id="last-name" name="last-name" placeholder="Прізвище" required>
+
+            <label for="phone-number">Номер телефону</label>
+            <input type="text" id="phone-number" name="phone-number" placeholder="Номер телефону" required>
+
+            <label for="city">Місто</label>
+            <input type="text" id="city" name="city" placeholder="Місто" required>
+
+            <label for="post-office">Відділення Нової Пошти</label>
+            <input type="text" id="post-office" name="post-office" placeholder="Відділення Нової Пошти" required>
 
             <label for="quantity">Кількість:</label>
             <input type="number" id="quantity" name="quantity" min="1" value="1" required>
@@ -37,7 +47,6 @@
         <a href="https://github.com/MaxMykolenko" style="color: #cacbc7;">©Made by Maks Mykolenko</a>
     </footer>
 
-    <!-- Add this script before the closing body tag -->
     <script>
         document.getElementById('orderForm').addEventListener('submit', async function(event) {
             event.preventDefault();
@@ -46,6 +55,9 @@
             const firstName = document.getElementById('first-name').value;
             const middleName = document.getElementById('middle-name').value;
             const lastName = document.getElementById('last-name').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+            const city = document.getElementById('city').value;
+            const postOffice = document.getElementById('post-office').value;
             const quantity = document.getElementById('quantity').value;
     
             try {
@@ -55,7 +67,7 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ firstName, middleName, lastName, quantity })
+                    body: JSON.stringify({ firstName, middleName, lastName, phoneNumber, city, postOffice, quantity })
                 });
                 
                 const data = await response.json();
@@ -70,6 +82,5 @@
             }
         });
     </script>
-    
 </body>
 </html>
