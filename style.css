@@ -1,8 +1,8 @@
 /* Загальні стилі */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     background-color: #f4f4f3;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Стилі для верхнього меню */
@@ -57,7 +57,12 @@ body {
     color: #333;
     font-weight: bold;
     margin-bottom: 10px;
-    margin-left: 60px;
+    margin-left: 150px;
+}
+
+.product-title:hover{
+    transform: scale(1.2);
+    color:#0091ff;
 }
 
 /* Стилі для слайдера на комп’ютерній версії */
@@ -83,6 +88,7 @@ body {
     display: flex;
     justify-content: center; /* Центрування по горизонталі */
     align-items: center; /* Центрування по вертикалі */
+    transition: transform 0.5s ease-in-out;
 }
 
 .swiper-slide img {
@@ -113,6 +119,11 @@ body {
     font-weight: bold;
     margin-top: 220px; /* Відступ вниз */
     margin-left: 200px; /* Відступ праворуч від слайдера */
+}
+
+.product-price:hover{
+    transform: scale(1.2);
+    color:#0091ff;
 }
 
 .product-details {
@@ -193,6 +204,12 @@ body {
 .reviews-list {
     margin-bottom: 20px;
     font-size: 16px;
+}
+
+.reviews-list p:hover {
+    color: #0056b3;
+    transform: scale(1.02);
+    transition: color 0.3s, transform 0.3s;
 }
 
 .review-form label {
@@ -324,5 +341,13 @@ footer {
 
     .menu-main li {
         margin: 10px 0;
+    }
+
+    .swiper-button-next {
+        right: -2px; /* Змінює відстань праворуч від слайдера */
+    }
+    
+    .swiper-button-prev {
+        left: -2px; /* Змінює відстань ліворуч від слайдера */
     }
 }
