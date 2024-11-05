@@ -26,7 +26,7 @@ label {
     font-weight: bold; /* Жирний шрифт для міток */
 }
 
-input[type="text"], input[type="number"], input[type="tel"], textarea{
+input[type="text"], input[type="number"], input[type="tel"], input[type="email"], textarea{
     width: 100%; /* Поле вводу на всю ширину */
     padding: 10px; /* Внутрішні відступи */
     margin-bottom: 15px; /* Відступ між полями вводу */
