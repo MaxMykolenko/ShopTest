@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form class="user-info" id="orderForm">
+        <form class="user-info" id="orderForm" action="https://formspree.io/f/mrbgqgvy" method="POST">
             <h1>Підтвердження замовлення</h1>
 
             <label for="first-name">Ім'я</label>
@@ -22,6 +22,9 @@
 
             <label for="phone-number">Номер телефону</label>
             <input type="text" id="phone-number" name="phone-number" placeholder="Номер телефону" required>
+
+            <label for="email">Ваш email</label>
+            <input type="email" name="email" required>
 
             <label for="city">Місто</label>
             <input type="text" id="city" name="city" placeholder="Місто" required>
@@ -46,41 +49,5 @@
     <footer>
         <a href="https://github.com/MaxMykolenko" style="color: #cacbc7;">©Made by Maks Mykolenko</a>
     </footer>
-
-    <script>
-        document.getElementById('orderForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-    
-            // Збір даних з форми
-            const firstName = document.getElementById('first-name').value;
-            const middleName = document.getElementById('middle-name').value;
-            const lastName = document.getElementById('last-name').value;
-            const phoneNumber = document.getElementById('phone-number').value;
-            const city = document.getElementById('city').value;
-            const postOffice = document.getElementById('post-office').value;
-            const quantity = document.getElementById('quantity').value;
-    
-            try {
-                // Заміна на локальний шлях з портом, якщо сервер працює на іншому порту
-                const response = await fetch('https://maxmykolenko.github.io/order', { 
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ firstName, middleName, lastName, phoneNumber, city, postOffice, quantity })
-                });
-                
-                const data = await response.json();
-                if (data.success) {
-                    alert('Замовлення надіслано успішно!');
-                } else {
-                    alert('Помилка при надсиланні замовлення: ' + data.message);
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Виникла помилка при надсиланні замовлення.');
-            }
-        });
-    </script>
 </body>
 </html>
